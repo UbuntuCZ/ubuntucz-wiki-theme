@@ -1,0 +1,113 @@
+/**
+ * Tableless Layout for default template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ */
+
+/* -------------- top row --------------- */
+div.dokuwiki .header {
+  padding: 0;
+}
+
+div.dokuwiki .pagename {
+  float: left;
+  font-size: 200%;
+  font-weight: bolder;
+  color: __background_alt__;
+  text-align: left;
+  vertical-align: middle;
+}
+
+div.dokuwiki .pagename a {
+  color: __extern__ !important;
+  text-decoration: none !important;
+}
+
+div.dokuwiki .logo {
+  float: right;
+  font-size: 220%;
+  font-weight: bolder;
+  text-align: right;
+  vertical-align: middle;
+}
+
+div.dokuwiki .logo a {
+  color: __background_alt__ !important;
+  text-decoration: none !important;
+  font-variant: small-caps;
+  letter-spacing: 2pt;
+}
+
+/* ---------------  top and bottom bar ---------------- */
+div.dokuwiki #bar__top {
+ 	-moz-border-radius:0 0 4px 4px;
+	-moz-box-shadow:0 0 2px #BBBBBB;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-box-shadow: #bbb 0px 0px 2px;
+	background-color:#F2F2F2;
+	height:40px;
+	width:950px;
+	/*float:left;*/
+	margin-bottom: 20px;
+	margin-left: 15px;
+  /*border-top: 1px solid __border__;
+  border-bottom: 1px solid __border__;
+  background: __background_alt__;
+  padding: 0.1em 0.15em;*/
+  clear: both;
+}
+
+div.dokuwiki .bar .button {
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  margin: 10px 2px 5px 2px;
+  color: #333333;
+}
+
+div.dokuwiki .bar .button:hover {
+  text-decoration: underline;
+  color: #dd4814;
+}
+
+div.dokuwiki .bar-left {
+  float: left;
+}
+
+div.dokuwiki .bar-right {
+  float: right;
+  text-align: right;
+}
+
+div.dokuwiki #bar__bottom {
+  margin-bottom: 3px;
+}
+
+/* ------------- File Metadata ----------------------- */
+
+div.dokuwiki div.meta {
+  clear: both;
+  margin-top: 1em;
+  color: __text_alt__;
+  font-size: 70%;
+}
+
+div.dokuwiki div.meta div.user {
+  font-size: 90%;
+  float: left;
+  margin: 5px 0 15px 20px;
+  color: #333333;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+div.dokuwiki div.meta div.doc {
+  font-size: 90%;
+  text-align: right;
+  margin: 5px 20px 5px 0;
+  color: #333333;
+  font-size: 12px;
+  line-height: 14px;
+}
