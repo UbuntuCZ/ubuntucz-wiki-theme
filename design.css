@@ -16,17 +16,18 @@ body {
   padding: 5px;
   margin: 0px auto 0px;
   width: 980px;
+  font-family: "ubuntu", "bitstream vera sans", "dejavu sans", verdana, sans-serif;
 
 }
 
 div.dokuwiki {
   background-color: white;
   border-radius: 6px 6px 6px 6px;
-  -moz-border-radius: 6px 6px 6px 6px;
-  -webkit-border-radius: 6px 6px 6px 6px;
+/*  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;*/
   box-shadow: #BBBBBB 0px 0px 2px;
-  -moz-box-shadow: #BBBBBB 0px 0px 2px;
-  -webkit-box-shadow: #BBBBBB 0px 0px 2px;
+/*  -moz-box-shadow: #BBBBBB 0px 0px 2px;
+  -webkit-box-shadow: #BBBBBB 0px 0px 2px;*/
   margin: 0px auto 0px;
   width: 980px;
 }
@@ -49,6 +50,7 @@ div.dokuwiki th {
 div.dokuwiki img {
   border: 0;
 }
+
 
 div.dokuwiki p,
 div.dokuwiki blockquote,
@@ -102,7 +104,7 @@ div.dokuwiki fieldset {
 }
 
 div.dokuwiki textarea.edit {
-  font-family: monospace, serif;
+  font-family: monospace, sans-serif;
   /* second generic font fixes problem with font-size, see
      http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */
   font-size: 100%;
@@ -124,9 +126,9 @@ html>body div.dokuwiki textarea.edit {
 div.dokuwiki input.edit,
 div.dokuwiki select.edit {
   font-size: 100%;
-  border: 1px solid #c1b496;
+  /*border: 1px solid #c1b496;
   color: #333333;
-  background-color: __background__;
+  background-color: __background__;*/
   vertical-align: middle;
   margin: 1px;
   padding: 0.20em 0.3em;
@@ -135,9 +137,9 @@ div.dokuwiki select.edit {
 
 /* nice alphatransparency background except for IE <7 */
 html>body div.dokuwiki input.edit,
-html>body div.dokuwiki select.edit {
+/*html>body div.dokuwiki select.edit {
   background:  __background__ url(images/inputshadow.png) repeat-x top;
-}
+}*/
 
 div.dokuwiki select.edit {
   padding: 0.1em 0;
@@ -265,9 +267,9 @@ div.dokuwiki div.pagenav-next {
 
 /* ----------- type of recent changes select -------- */
 
-div.dokuwiki form#dw__recent select {
+/*div.dokuwiki form#dw__recent select {
     margin-bottom: 10px;
-}
+}*/
 
 /* --------------- Links ------------------ */
 
@@ -294,14 +296,14 @@ div.dokuwiki a.nolink {
 
 /* external link */
 div.dokuwiki a.urlextern {
-  background: transparent url(images/link_icon.gif) 0px 1px no-repeat;
-  padding: 1px 0px 1px 16px;
+  /*background: transparent url(images/link_icon.gif) 0px 1px no-repeat;*/
+  /*padding: 1px 0px 1px 16px;*/
 }
 
 /* windows share */
 div.dokuwiki a.windows {
-  background: transparent url(images/windows.gif) 0px 1px no-repeat;
-  padding: 1px 0px 1px 16px;
+  /*background: transparent url(images/windows.gif) 0px 1px no-repeat;*/
+  /*padding: 1px 0px 1px 16px;*/
 }
 
 /* interwiki link (icon are set by dokuwiki) */
@@ -384,7 +386,7 @@ div.dokuwiki li.minor {
 
 /* embedded images */
 div.dokuwiki img.media {
-  margin: 3px;
+
 }
 
 div.dokuwiki img.medialeft {
@@ -500,7 +502,7 @@ div.dokuwiki blockquote {
 
 div.dokuwiki pre,
 div.dokuwiki code {
-  font-family: UbuntuMono,monospace,courier;
+  font-family: "Ubuntu Mono",monospace,courier,sans-serif;
   /* second generic font fixes problem with font-size, see
      http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */
   font-size: 100%;
@@ -597,7 +599,7 @@ div.dokuwiki div.tocheader {
 
 div.dokuwiki span.toc_open,
 div.dokuwiki span.toc_close {
-    border: 0.4em solid __background_alt__;
+    border: 0.4em solid #F1F1ED;
     float: right;
     display: block;
     margin: 0.4em 3px 0 0;
@@ -916,11 +918,11 @@ div.dokuwiki div.imagemeta img.thumb {
 
 #wikiheader {
   border-radius: 6px 6px 0px 0px;
-  -moz-border-radius: 6px 6px 0px 0px;
-  -webkit-border-radius: 6px 6px 0px 0px;
+/*  -moz-border-radius: 6px 6px 0px 0px;
+  -webkit-border-radius: 6px 6px 0px 0px;*/
   box-shadow: #BBBBBB 0px 0px 2px;
-  -moz-box-shadow: #BBBBBB 0px 0px 2px;
-  -webkit-box-shadow: #BBBBBB 0px 0px 2px;
+/*  -moz-box-shadow: #BBBBBB 0px 0px 2px;
+  -webkit-box-shadow: #BBBBBB 0px 0px 2px;*/
 }
 
 #wikiheader ul {
@@ -945,7 +947,7 @@ div.dokuwiki div.imagemeta img.thumb {
   color: #FFFFFF;
   height: 35px;
   padding: 15px 9px 0 9px;
-  font-size: 13px;
+  font-size: 14px;
   display: block;
   margin: 0 !important;
 }
@@ -969,11 +971,11 @@ div.dokuwiki div.imagemeta img.thumb {
 	border: 0px solid #B73F00;
 	/*background: #FFFFFF;*/
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+/*	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;*/
 	box-shadow: inset #BBBBBB 2px 2px 2px;
-	-moz-box-shadow: inset #BBBBBB 2px 2px 2px;
-	-webkit-box-shadow: inset #BBBBBB 2px 2px 2px;
+/*	-moz-box-shadow: inset #BBBBBB 2px 2px 2px;
+	-webkit-box-shadow: inset #BBBBBB 2px 2px 2px;*/
 	font-size: 10px;
 }
 #wikiheader .min-search #dw__search input.button {

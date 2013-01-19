@@ -31,6 +31,21 @@ if (!defined('DOKU_INC')) die();
   <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35105820-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 
 <body>
@@ -48,7 +63,7 @@ if (!defined('DOKU_INC')) die();
 		<li><a href="http://forum.ubuntu.cz/" title="Fórum">Fórum</a></li>
 		<li class="last"><a href="http://blog.ubuntu.cz" title="">Blog</a></li>
 		<div class="min-search"><?php tpl_searchform();?></div>
-		<div id="logo"> <a href="http://wiki.ubuntu.cz" title=""> <img src="http://www.ubuntu.cz/sites/all/themes/udtheme-2010/logo.png" alt=""></a></div>
+		<div id="logo"> <a href="http://wiki.ubuntu.cz" title=""> <img src="/lib/tpl/ubuntucz-wiki-theme/images/logo.png" alt=""></a></div>
 	</ul>
 </div>
       <div class="clearer"></div>
@@ -56,13 +71,16 @@ if (!defined('DOKU_INC')) die();
 
     <?php /*old includehook*/ @include(dirname(__FILE__).'/header.html')?>
 
+
     <div class="bar" id="bar__top">
       <div class="bar-left" id="bar__topleft">
         <?php tpl_button('edit')?>
-        <?php tpl_button('history')?>
+        <?php tpl_button('media')?>
+        <?php tpl_select_actions()?>
       </div>
 
       <div class="bar-right" id="bar__topright">
+        <span id="user"><?php if ($_SERVER['REMOTE_USER']) print '<a href="/users/'.$_SERVER['REMOTE_USER'].'">'.$INFO['userinfo']['name'].'</a>'?></span>
         <?php tpl_button('profile')?>
         <?php tpl_button('admin')?>
         <?php tpl_button('login')?>
@@ -107,7 +125,13 @@ if (!defined('DOKU_INC')) die();
         <?php tpl_userinfo()?>
       </div>
       <div class="doc">
-        <?php tpl_pageinfo()?>
+        <?php 
+        if ($INFO['user']) {
+         global $auth;
+        	$userinfo = $auth->getUserData($INFO['user']);
+        	print 'Poslední úprava: '.dformat($INFO['lastmod']).', autor: <a href="/users/'.$INFO['user'].'">'.$userinfo['name'].'</a>';
+        	}
+        else tpl_pageinfo(); ?>
       </div>
     </div>
 
@@ -133,3 +157,45 @@ if (!defined('DOKU_INC')) die();
 <div class="no"><?php /* provide DokuWiki housekeeping, required in all templates */ tpl_indexerWebBug()?></div>
 </body>
 </html>
+
+<?php /**
+ * Create actions select box
+ *
+ * Create actions select box.
+ *
+ * @author Kirill Bezrukov <kirbez@mail.ru>
+ */
+function tpl_select_actions(){
+  global $ID;
+  global $INFO;
+  global $REV;
+  global $ACT;
+  global $conf;
+  global $lang;
+  global $auth;
+ 
+	if($ACT == 'show' || $ACT == 'search'){
+		if($INFO['writable']){
+			if($INFO['exists']){
+			  print '<select class="edit" name="actionmenu" onchange=
+						"if ((this.selectedIndex != 0) &&
+								(this.options[this.selectedIndex].disabled == false)) {
+							location.href = this.options[this.selectedIndex].value;
+						}
+			            this.selectedIndex = 0;" >'. DOKU_LF;	
+				print '  <option value="show">Další akce:</option>'.DOKU_LF;
+				print '  <option value="'.wl($ID,'do=export_raw').'">Zdrojový kód</option>'. DOKU_LF;
+			        print '  <option value="'.wl($ID,'do=export_xhtml').'">HTML export</option>'. DOKU_LF;	        
+			        print '  <option value="show" disabled="disabled" class="disabled">--------------</option>'. DOKU_LF;
+			        print '  <option value="'.wl($ID,'purge=true').'">Smazat cache</option>'. DOKU_LF;
+				print '  <option value="'.wl($ID,'do=admin&page=acl').'">ACL</option>'. DOKU_LF;
+			print '  <option value="show" disabled="disabled" class="disabled">--------------</option>'. DOKU_LF;		
+			print '  <option value="'.wl($ID,'do=revisions').'">Starší verze</option>'. DOKU_LF;
+			print '  <option value="'.wl($ID,'do=subscribe').'">Odebírat změny</option>'. DOKU_LF;
+				print '</select>';	
+		  }
+		}
+	}
+ 
+  return true;
+}?>

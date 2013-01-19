@@ -59,11 +59,19 @@ div.dokuwiki #bar__top {
   clear: both;
 }
 
+div.dokuwiki #bar__top select.edit {
+/*	background-image: none;
+	background: none;*/
+	margin-left: 10px;
+	font-size: 12px;
+	margin-top: -3px;
+}
+
 div.dokuwiki .bar .button {
   border: none;
   background: transparent;
   font-size: 12px;
-  margin: 10px 2px 5px 2px;
+  margin: 0px 2px 4px 2px;
   color: #333333;
 }
 
@@ -74,11 +82,22 @@ div.dokuwiki .bar .button:hover {
 
 div.dokuwiki .bar-left {
   float: left;
+  padding-top: 10px;
 }
 
 div.dokuwiki .bar-right {
   float: right;
   text-align: right;
+  padding-top: 10px;
+}
+
+div.dokuwiki .bar-right #user {
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+div.dokuwiki .bar-right #user a {
+	color: #333333;
 }
 
 div.dokuwiki #bar__bottom {
