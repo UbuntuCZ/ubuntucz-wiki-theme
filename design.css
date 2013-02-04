@@ -580,15 +580,18 @@ div.dokuwiki table.inline td {
 
 /* ---------- table of contents ------------------- */
 
-div.dokuwiki div.toc {
+div.dokuwiki div#dw__toc {
   margin: 1.2em 0 0 2em;
   float: right;
   width: 300px;
   font-size: 100%;
   clear: both;
+  border: none;/*1px solid __border__;*/
+  background-color: #F1F1ED;
+  padding: 5px;
 }
 
-div.dokuwiki div.tocheader {
+div.dokuwiki #dw__toc h3 {
   border: none;/*1px solid __border__;*/
   background-color: #F1F1ED;
   text-align: left;
@@ -597,37 +600,37 @@ div.dokuwiki div.tocheader {
   /*margin-bottom: 2px;*/
 }
 
-div.dokuwiki span.toc_open,
-div.dokuwiki span.toc_close {
+div.dokuwiki #dw__toc.close h3 strong,
+div.dokuwiki #dw__toc.close h3 strong {
     border: 0.4em solid #F1F1ED;
     float: right;
     display: block;
     margin: 0.4em 3px 0 0;
 }
 
-div.dokuwiki span.toc_open span,
-div.dokuwiki span.toc_close span {
+div.dokuwiki #dw__toc.close h3 span,
+div.dokuwiki #dw__toc.close h3 span {
     display: none;
 }
 
-div.dokuwiki span.toc_open {
+div.dokuwiki #dw__toc.close h3 strong {
     margin-top: 0.4em;
     border-top: 0.4em solid __text__;
 }
 
-div.dokuwiki span.toc_close {
+div.dokuwiki #dw__toc.open h3 strong {
     margin-top: 0;
     border-bottom: 0.4em solid __text__;
 }
 
-div.dokuwiki #toc__inside {
+div.dokuwiki dw__toc > div {
   border: none;/*1px solid __border__;*/
   background-color: #F1F1ED;
   text-align: left;
   padding: 5px;
 }
 
-div.dokuwiki ul.toc {
+div.dokuwiki #dw__toc ul {
   list-style-type: decimal;
   list-style-image: none;
   line-height: 1.2em;
@@ -635,23 +638,23 @@ div.dokuwiki ul.toc {
   margin: 0;
 }
 
-div.dokuwiki ul.toc li {
+div.dokuwiki #dw__toc ul li {
   /*background: transparent url(images/tocdot2.gif) 0 0.6em no-repeat;*/
   padding-left: 0.4em;
 }
 
-div.dokuwiki ul.toc li.clear {
+div.dokuwiki #dw__toc ul li.clear {
   background-image: none;
   padding-left: 0.4em;
 }
 
-div.dokuwiki a.toc:link,
-div.dokuwiki a.toc:visited {
+div.dokuwiki #dw__toc ul a:link,
+div.dokuwiki #dw__toc ul a:visited {
   color: #DD4814;
 }
 
-div.dokuwiki a.toc:hover,
-div.dokuwiki a.toc:active {
+div.dokuwiki #dw__toc ul a:hover,
+div.dokuwiki #dw__toc ul a:active {
   color: #DD4814;
 }
 
@@ -740,12 +743,21 @@ div.insitu-footnote {
 }
 
 /* --------------- search result formating --------------- */
-div.dokuwiki .search_result {
-  margin-bottom: 6px;
+#dw__loading {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+div.dokuwiki .search_results {
   padding: 0 10px 0 30px;
 }
 
-div.dokuwiki .search_snippet {
+div.dokuwiki .search_results dt {
+  margin-bottom: 3px;
+}
+
+div.dokuwiki .search_results dd {
+  margin-bottom: 6px;
   color: __text_other__;
   font-size: 12px;
   margin-left: 20px;
