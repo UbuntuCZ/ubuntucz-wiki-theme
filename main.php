@@ -61,7 +61,8 @@ if (!defined('DOKU_INC')) die();
 		<li class="first"><a href="http://www.ubuntu.cz" title="Ubuntu.cz">Ubuntu.cz</a></li>
 		<li><a href="http://wiki.ubuntu.cz/" title="Wiki návody">Wiki návody</a></li>
 		<li><a href="http://forum.ubuntu.cz/" title="Fórum">Fórum</a></li>
-		<li class="last"><a href="http://blog.ubuntu.cz" title="">Blog</a></li>
+		<li><a href="http://blog.ubuntu.cz" title="">Blog</a></li>
+		<li class="last"><a href="http://komunita.ubuntu.cz" title="">Komunita</a></li>
 		<div class="min-search"><?php tpl_searchform();?></div>
 		<div id="logo"> <a href="http://wiki.ubuntu.cz" title=""> <img src="/lib/tpl/ubuntucz-wiki-theme/images/logo.png" alt=""></a></div>
 	</ul>
