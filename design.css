@@ -1012,3 +1012,118 @@ div.dokuwiki div.imagemeta img.thumb {
 	margin-left: 1em;
 
 }
+
+/* wrap */
+
+.dokuwiki .wrap_box {
+    background: #EDE7EA;
+    color: __text__;
+}
+
+.dokuwiki div.wrap_upravy { /* added */
+    background-color: #A0B8E2;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+}
+
+.dokuwiki div.wrap_aktualizace { /* added */
+    background-color: #FF9EDB;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+}
+
+.dokuwiki div.wrap_rozsireni { /* added */
+    background-color: #F5E627;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+}
+
+.dokuwiki div.wrap_grafika { /* added */
+    background-color: #AFE2A0;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+}
+
+
+.dokuwiki div.wrap_ybox{ /* added */
+    background-color: #EFA723;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+}
+
+.dokuwiki div.wrap_wbox{ /* added */
+    background-color: #ffffff;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+}
+
+.dokuwiki div.wrap_nedokonceny{ /* added */
+    background-color: #DDDDDD;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+    margin-left: 145px;
+}
+
+.dokuwiki div.wrap_pokrocily{ /* added */
+    background-color: #FFA500;
+    color: #000;
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 1em;
+    margin-left: 75px;
+}
+
+.dokuwiki div.wrap_ybox p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_wbox p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_upravy p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_aktualizace p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_rozsireni p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_grafika p { /* added */
+    margin-bottom: 0;
+}
+
+
+.dokuwiki div.wrap_box p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_nedokonceny p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_nedokonceny img { /* added */
+    vertical-align: middle;
+}
+
+.dokuwiki div.wrap_pokrocily p { /* added */
+    margin-bottom: 0;
+}
+
+.dokuwiki div.wrap_pokrocily img { /* added */
+    vertical-align: middle;
+}
+
+.dokuwiki div.wrap_ybox img { /* added */
+    vertical-align: middle;
+}
